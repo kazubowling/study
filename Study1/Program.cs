@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Study1
 {
+    //第1章　基本的なプログラム
     class Study
     {
         //public static void Main()
@@ -87,9 +88,18 @@ namespace Study1
             //Console.WriteLine("5 ÷ 5は" + 5 / 5 + " です。");
             //Console.WriteLine("5 ÷ 3の余りは" + 5 % 3 + " です。");
 
-            int a = 90;
-            a += 10;
-            Console.WriteLine("90に10を足すと、" + a + "です。");
+            //int a = 90;
+            //a += 10;
+            //Console.WriteLine("90に10を足すと、" + a + "です。");
+
+            int a = 1;
+            Console.WriteLine("はじめは " + a  + " です。");
+
+            a++;
+            Console.WriteLine("1つ増えて " + a + " になりました。");
+
+            a--;
+            Console.WriteLine("1つ減って " + a + " に戻りました。");
         }
     }
 }
