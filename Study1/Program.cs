@@ -92,14 +92,22 @@ namespace Study1
             //a += 10;
             //Console.WriteLine("90に10を足すと、" + a + "です。");
 
+            //int a = 1;
+            //Console.WriteLine("はじめは " + a  + " です。");
+
+            //a++;
+            //Console.WriteLine("1つ増えて " + a + " になりました。");
+
+            //a--;
+            //Console.WriteLine("1つ減って " + a + " に戻りました。");
+
+
+            //a++と++aの違い
             int a = 1;
-            Console.WriteLine("はじめは " + a  + " です。");
+            int b = 1;
 
-            a++;
-            Console.WriteLine("1つ増えて " + a + " になりました。");
-
-            a--;
-            Console.WriteLine("1つ減って " + a + " に戻りました。");
+            Console.WriteLine("前置だとaは " + ++a + " になります。");
+            Console.WriteLine("後置だとaは " + b++ + " になります。");
         }
     }
 }
