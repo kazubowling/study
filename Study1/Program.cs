@@ -133,16 +133,26 @@ namespace Study1
 
 
             //条件演算子
-            string right = "正解", wrong = "不正解";
-            bool value;
+            //string right = "正解", wrong = "不正解";
+            //bool value;
 
-            value = true;
-            string answer = value ? right : wrong;
-            Console.WriteLine(answer);
+            //value = true;
+            //string answer = value ? right : wrong;
+            //Console.WriteLine(answer);
 
-            value = false;
-            answer = value ? right : wrong ;
-            Console.WriteLine(answer);
+            //value = false;
+            //answer = value ? right : wrong ;
+            //Console.WriteLine(answer);
+
+
+            //論理演算子
+            int a = 3, b = 4;
+            bool x, y;
+
+            x = (a < 0);
+            y = (b > 0);
+            Console.WriteLine((a == 3) && (b == 3));
+            Console.WriteLine(x || y);
         }
     }
 }
