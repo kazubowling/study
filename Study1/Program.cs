@@ -111,12 +111,25 @@ namespace Study1
 
 
             //比較演算子
+            //int a = 10, b = 20;
+            //Console.WriteLine("a = " + a + " b = " +  b);
+            //Console.WriteLine("a<b・・・" + (a < b));
+            //Console.WriteLine("a>b・・・" + (a > b));
+            //Console.WriteLine("a==b・・・" + (a == b));
+            //Console.WriteLine("a=b・・・" + (a = b));
+
+
+            //論理型
             int a = 10, b = 20;
-            Console.WriteLine("a = " + a + " b = " +  b);
-            Console.WriteLine("a<b・・・" + (a < b));
-            Console.WriteLine("a>b・・・" + (a > b));
-            Console.WriteLine("a==b・・・" + (a == b));
-            Console.WriteLine("a=b・・・" + (a = b));
+            bool c, d, e;
+
+            c = a < b;
+            d = a > b;
+            e = a == b;
+            Console.WriteLine("a=" + a + "b=" + b);
+            Console.WriteLine("a<b・・・" +c);
+            Console.WriteLine("a>b・・・" + d);
+            Console.WriteLine("a==b・・・" + e);
         }
     }
 }
