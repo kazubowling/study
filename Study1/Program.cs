@@ -107,7 +107,7 @@ namespace Study1
             int b = 1;
 
             Console.WriteLine("前置だとaは " + ++a + " になります。");
-            Console.WriteLine("後置だとaは " + b++ + " になります。");
+            Console.WriteLine("後置だとbは " + b++ + " になります。");
         }
     }
 }
