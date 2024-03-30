@@ -120,16 +120,29 @@ namespace Study1
 
 
             //論理型
-            int a = 10, b = 20;
-            bool c, d, e;
+            //int a = 10, b = 20;
+            //bool c, d, e;
 
-            c = a < b;
-            d = a > b;
-            e = a == b;
-            Console.WriteLine("a=" + a + "b=" + b);
-            Console.WriteLine("a<b・・・" +c);
-            Console.WriteLine("a>b・・・" + d);
-            Console.WriteLine("a==b・・・" + e);
+            //c = a < b;
+            //d = a > b;
+            //e = a == b;
+            //Console.WriteLine("a=" + a + "b=" + b);
+            //Console.WriteLine("a<b・・・" +c);
+            //Console.WriteLine("a>b・・・" + d);
+            //Console.WriteLine("a==b・・・" + e);
+
+
+            //条件演算子
+            string right = "正解", wrong = "不正解";
+            bool value;
+
+            value = true;
+            string answer = value ? right : wrong;
+            Console.WriteLine(answer);
+
+            value = false;
+            answer = value ? right : wrong ;
+            Console.WriteLine(answer);
         }
     }
 }
