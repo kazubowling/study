@@ -103,11 +103,20 @@ namespace Study1
 
 
             //a++と++aの違い
-            int a = 1;
-            int b = 1;
+            //int a = 1;
+            //int b = 1;
 
-            Console.WriteLine("前置だとaは " + ++a + " になります。");
-            Console.WriteLine("後置だとbは " + b++ + " になります。");
+            //Console.WriteLine("前置だとaは " + ++a + " になります。");
+            //Console.WriteLine("後置だとbは " + b++ + " になります。");
+
+
+            //比較演算子
+            int a = 10, b = 20;
+            Console.WriteLine("a = " + a + " b = " +  b);
+            Console.WriteLine("a<b・・・" + (a < b));
+            Console.WriteLine("a>b・・・" + (a > b));
+            Console.WriteLine("a==b・・・" + (a == b));
+            Console.WriteLine("a=b・・・" + (a = b));
         }
     }
 }
