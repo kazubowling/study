@@ -156,10 +156,13 @@ namespace Study1
 
 
             //演算の優先度
-            Console.WriteLine("2 × 8 - 6 ÷ 2 = " + (2 * 8 - 6 / 2));
-            Console.WriteLine("2　× (8  - 6) ÷ 2 = " + 2 * (8 - 6) /2);
-            Console.WriteLine("1 - 2 + 3 = " + (1 - 2 + 3));
-            Console.WriteLine("1 - (2 + 3 ) = " + (1 - (2 + 3)));
+            //Console.WriteLine("2 × 8 - 6 ÷ 2 = " + (2 * 8 - 6 / 2));
+            //Console.WriteLine("2　× (8  - 6) ÷ 2 = " + 2 * (8 - 6) /2);
+            //Console.WriteLine("1 - 2 + 3 = " + (1 - 2 + 3));
+            //Console.WriteLine("1 - (2 + 3 ) = " + (1 - (2 + 3)));
+
+
+
         }
     }
 }
