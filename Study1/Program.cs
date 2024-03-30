@@ -146,13 +146,20 @@ namespace Study1
 
 
             //論理演算子
-            int a = 3, b = 4;
-            bool x, y;
+            //int a = 3, b = 4;
+            //bool x, y;
 
-            x = (a < 0);
-            y = (b > 0);
-            Console.WriteLine((a == 3) && (b == 3));
-            Console.WriteLine(x || y);
+            //x = (a < 0);
+            //y = (b > 0);
+            //Console.WriteLine((a == 3) && (b == 3));
+            //Console.WriteLine(x || y);
+
+
+            //演算の優先度
+            Console.WriteLine("2 × 8 - 6 ÷ 2 = " + (2 * 8 - 6 / 2));
+            Console.WriteLine("2　× (8  - 6) ÷ 2 = " + 2 * (8 - 6) /2);
+            Console.WriteLine("1 - 2 + 3 = " + (1 - 2 + 3));
+            Console.WriteLine("1 - (2 + 3 ) = " + (1 - (2 + 3)));
         }
     }
 }
