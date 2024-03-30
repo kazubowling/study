@@ -63,16 +63,16 @@ namespace Study1
 
 
         //コレクション Listの使い方(第1章)
-        //public static void Main(string[] args)
-        //{
-        //    List<string> airlines = new List<string>() { "Japan Airlines", "American Airlines" };
-        //    //airlines.Add("Japan Airlines");
-        //    //airlines.Add("American Airlines");
-        //    //airlines.Add("All Nippon Airways");
+        public static void Main(string[] args)
+        {
+            List<string> airlines = new List<string>() { "Japan Airlines", "American Airlines" };
+            //airlines.Add("Japan Airlines");
+            //airlines.Add("American Airlines");
+            //airlines.Add("All Nippon Airways");
 
-        //    Console.WriteLine("airlines[0] = " + airlines[0]);
-        //    Console.WriteLine("airlines[1] = " + airlines[1]);
-        //    //Console.WriteLine("airlines[2] = " + airlines[2]);
-        //}
+            Console.WriteLine("airlines[0] = " + airlines[0]);
+            Console.WriteLine("airlines[1] = " + airlines[1]);
+            //Console.WriteLine("airlines[2] = " + airlines[2]);
+        }
     }
 }
