@@ -63,16 +63,33 @@ namespace Study1
 
 
         //コレクション Listの使い方(第1章)
-        public static void Main(string[] args)
-        {
-            List<string> airlines = new List<string>() { "Japan Airlines", "American Airlines" };
-            //airlines.Add("Japan Airlines");
-            //airlines.Add("American Airlines");
-            //airlines.Add("All Nippon Airways");
+        //public static void Main(string[] args)
+        //{
+        //    List<string> airlines = new List<string>() { "Japan Airlines", "American Airlines" };
+        //    airlines.Add("Japan Airlines");
+        //    airlines.Add("American Airlines");
+        //    airlines.Add("All Nippon Airways");
 
-            Console.WriteLine("airlines[0] = " + airlines[0]);
-            Console.WriteLine("airlines[1] = " + airlines[1]);
-            //Console.WriteLine("airlines[2] = " + airlines[2]);
+        //    Console.WriteLine("airlines[0] = " + airlines[0]);
+        //    Console.WriteLine("airlines[1] = " + airlines[1]);
+        //    Console.WriteLine("airlines[2] = " + airlines[2]);
+        //}
+    }
+
+    //第2章　演算子
+    class study2
+    {
+        static void Main()
+        {
+            //Console.WriteLine("5 + 5は" + (5 + 5) + " です。");
+            //Console.WriteLine("5 - 5は" + (5 - 5) + " です。");
+            //Console.WriteLine("5 × 5は" + 5 * 5 + "です。");
+            //Console.WriteLine("5 ÷ 5は" + 5 / 5 + " です。");
+            //Console.WriteLine("5 ÷ 3の余りは" + 5 % 3 + " です。");
+
+            int a = 90;
+            a += 10;
+            Console.WriteLine("90に10を足すと、" + a + "です。");
         }
     }
 }
