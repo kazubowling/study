@@ -186,15 +186,29 @@ namespace Study1
     {
         static void Main()
         {
-            int a = 1999900024;
+            //int a = 1999900024;
 
-            if ( a % 2 == 0 )
+            //if ( a % 2 == 0 )
+            //{
+            //    Console.WriteLine(a + "は偶数です。");
+            //} 
+            //else
+            //{
+            //    Console.WriteLine(a + "は奇数です。");
+            //}
+
+            int s = 65;
+
+            Console.WriteLine("あなたの点数は" + s + "点です。");
+
+            if (s < 70)
             {
-                Console.WriteLine(a + "は偶数です。");
-            } 
+                Console.WriteLine("平均点まであと" + (70 - s) + "点");
+                Console.WriteLine("がんばりましょう！");
+            }
             else
             {
-                Console.WriteLine(a + "は奇数です。");
+                Console.WriteLine("よくできました！");
             }
         }
     }
