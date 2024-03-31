@@ -162,7 +162,22 @@ namespace Study1
             //Console.WriteLine("1 - (2 + 3 ) = " + (1 - (2 + 3)));
 
 
+            //コラム checked, unchecked文
+            int a, b;
+            try
+            {
+                checked
+                {
+                    a = int.MaxValue;
+                    b = a + 1;
+                    Console.WriteLine(b);
+                }
+            }
 
+            catch (OverflowException oe)
+            {
+                Console.WriteLine(oe.Message);
+            }
         }
     }
 }
