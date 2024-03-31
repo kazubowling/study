@@ -211,22 +211,30 @@ namespace Study1
             //    Console.WriteLine("よくできました！");
             //}
 
-            int a = 90;
+            //int a = 90;
 
-            if (a > 80)
+            //if (a > 80)
+            //{
+            //    if (a == 100)
+            //    {
+            //        Console.WriteLine("満点です。");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("もう少しです。");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("がんばりましょう。");
+            //}
+
+
+            int i;
+
+            for (i = 1; i < 4; i++)
             {
-                if (a == 100)
-                {
-                    Console.WriteLine("満点です。");
-                }
-                else
-                {
-                    Console.WriteLine("もう少しです。");
-                }
-            }
-            else
-            {
-                Console.WriteLine("がんばりましょう。");
+                Console.WriteLine("こんにちは" + i);
             }
         }
     }
