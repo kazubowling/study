@@ -258,12 +258,26 @@ namespace Study1
 
 
             //while文
-            int i = 0;
+            //int i = 0;
 
-            while (i <= 5)
+            //while (i <= 5)
+            //{
+            //    Console.WriteLine(i);
+            //    i++;
+            //}
+
+
+            //break文
+            int a, b = 2;
+
+            for (a = 0; a < 5; a++)
             {
-                Console.WriteLine(i);
-                i++;
+                if (b - a <= 0)
+                {
+                    break;
+                }
+
+                Console.WriteLine(b + "-" + a + "=" + (b - a));
             }
         }
     }
