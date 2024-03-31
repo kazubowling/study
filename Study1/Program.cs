@@ -163,20 +163,38 @@ namespace Study1
 
 
             //コラム checked, unchecked文
-            int a, b;
-            try
-            {
-                checked
-                {
-                    a = int.MaxValue;
-                    b = a + 1;
-                    Console.WriteLine(b);
-                }
-            }
+            //int a, b;
+            //try
+            //{
+            //    checked
+            //    {
+            //        a = int.MaxValue;
+            //        b = a + 1;
+            //        Console.WriteLine(b);
+            //    }
+            //}
 
-            catch (OverflowException oe)
+            //catch (OverflowException oe)
+            //{
+            //    Console.WriteLine(oe.Message);
+            //}
+        }
+    }
+
+    //制御文
+    class study3
+    {
+        static void Main()
+        {
+            int a = 5;
+
+            if ( a % 2 == 0 )
             {
-                Console.WriteLine(oe.Message);
+                Console.WriteLine(a + "は偶数です。");
+            } 
+            else
+            {
+                Console.WriteLine(a + "は奇数です。");
             }
         }
     }
