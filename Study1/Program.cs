@@ -186,7 +186,7 @@ namespace Study1
     {
         static void Main()
         {
-            int a = 5;
+            int a = 1999900024;
 
             if ( a % 2 == 0 )
             {
