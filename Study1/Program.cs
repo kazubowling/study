@@ -80,8 +80,8 @@ namespace Study1
     //第2章　演算子
     class study2
     {
-        static void Main()
-        {
+        //static void Main()
+        //{
             //Console.WriteLine("5 + 5は" + (5 + 5) + " です。");
             //Console.WriteLine("5 - 5は" + (5 - 5) + " です。");
             //Console.WriteLine("5 × 5は" + 5 * 5 + "です。");
@@ -178,7 +178,7 @@ namespace Study1
             //{
             //    Console.WriteLine(oe.Message);
             //}
-        }
+        //}
     }
 
     //制御文
