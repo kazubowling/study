@@ -238,14 +238,22 @@ namespace Study1
             //}
 
 
-            int i, j;
+            //int i, j;
 
-            for (j = 1; j <= 9; j++)
+            //for (j = 1; j <= 9; j++)
+            //{
+            //    for(i = 1; i <= 9; i++)
+            //    {
+            //        Console.WriteLine(j + "×" + i + "=" + j*i);
+            //    }
+            //}
+
+
+            int[] nums = { 1, 2, 3, 4 };
+
+            foreach (int i in nums)
             {
-                for(i = 1; i <= 9; i++)
-                {
-                    Console.WriteLine(j + "×" + i + "=" + j*i);
-                }
+                Console.WriteLine(i);
             }
         }
     }
