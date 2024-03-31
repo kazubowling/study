@@ -197,7 +197,7 @@ namespace Study1
             //    Console.WriteLine(a + "は奇数です。");
             //}
 
-            int s = 65;
+            int s = 80;
 
             Console.WriteLine("あなたの点数は" + s + "点です。");
 
