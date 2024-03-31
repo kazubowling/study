@@ -268,16 +268,29 @@ namespace Study1
 
 
             //break文
-            int a, b = 2;
+            //int a, b = 2;
+
+            //for (a = 0; a < 5; a++)
+            //{
+            //    if (b - a <= 0)
+            //    {
+            //        break;
+            //    }
+
+            //    Console.WriteLine(b + "-" + a + "=" + (b - a));
+            //}
+
+
+            //continue文
+            int a, b = 1;
 
             for (a = 0; a < 5; a++)
             {
-                if (b - a <= 0)
+                if (a + b == 2)
                 {
-                    break;
+                    continue;
                 }
-
-                Console.WriteLine(b + "-" + a + "=" + (b - a));
+                Console.WriteLine(a + "+" + b + "=" + (a + b));
             }
         }
     }
