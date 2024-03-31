@@ -230,11 +230,22 @@ namespace Study1
             //}
 
 
-            int i;
+            //int i;
 
-            for (i = 1; i < 4; i++)
+            //for (i = 1; i < 4; i++)
+            //{
+            //    Console.WriteLine("こんにちは" + i);
+            //}
+
+
+            int i, j;
+
+            for (j = 1; j <= 9; j++)
             {
-                Console.WriteLine("こんにちは" + i);
+                for(i = 1; i <= 9; i++)
+                {
+                    Console.WriteLine(j + "×" + i + "=" + j*i);
+                }
             }
         }
     }
