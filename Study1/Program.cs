@@ -249,11 +249,21 @@ namespace Study1
             //}
 
 
-            int[] nums = { 1, 2, 3, 4 };
+            //int[] nums = { 1, 2, 3, 4 };
 
-            foreach (int i in nums)
+            //foreach (int i in nums)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+
+            //while文
+            int i = 0;
+
+            while (i <= 5)
             {
                 Console.WriteLine(i);
+                i++;
             }
         }
     }
