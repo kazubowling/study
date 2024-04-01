@@ -282,15 +282,36 @@ namespace Study1
 
 
             //continue文
-            int a, b = 1;
+            //int a, b = 1;
 
-            for (a = 0; a < 5; a++)
+            //for (a = 0; a < 5; a++)
+            //{
+            //    if (a + b == 2)
+            //    {
+            //        continue;
+            //    }
+            //    Console.WriteLine(a + "+" + b + "=" + (a + b));
+            //}
+
+
+            //switch文
+            int a;
+            for (a = 5; a <= 10; a++)
             {
-                if (a + b == 2)
+                Console.WriteLine(a + "÷ 3 = " + a / 3);
+
+                switch (a % 3)
                 {
-                    continue;
+                    case 1:
+                        Console.WriteLine("：余りは1です。");
+                        break;
+                    case 2:
+                        Console.WriteLine("余りは2です。");
+                        break;
+                    default:
+                        Console.WriteLine("余りは0です。");
+                        break;
                 }
-                Console.WriteLine(a + "+" + b + "=" + (a + b));
             }
         }
     }
