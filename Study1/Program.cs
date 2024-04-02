@@ -360,7 +360,7 @@ namespace Study1
 
             for (i = 0; i < 6;  i++)
             {
-                Console.WriteLine(names[i] + " " + scores[i] + " ");
+                Console.Write(names[i] + " " + scores[i] + " ");
                 for (j = 0; j < scores[i] / 5; j++)
                 {
                     Console.Write("*");
