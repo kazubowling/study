@@ -347,7 +347,7 @@ namespace Study1
 
             string[] names =
             {
-                "向井　康二　", "目黒　蓮　 ", "阿部　亮平　", "渡辺　翔太　", "深澤　辰哉　", "佐久間　大介", "宮舘　涼太　", "ラウール　", "岩本　照 　"
+                "向井　康二　", "目黒　蓮　　", "阿部　亮平　", "渡辺　翔太　", "深澤　辰哉　", "佐久間　大介", "宮舘　涼太　", "ラウール　", "岩本　照 　"
             };
 
             int[] scores =
@@ -358,7 +358,7 @@ namespace Study1
             int i, j;
             string s;
 
-            for (i = 0; i < 6;  i++)
+            for (i = 0; i < 9;  i++)
             {
                 Console.Write(names[i] + " " + scores[i] + " ");
                 for (j = 0; j < scores[i] / 5; j++)
