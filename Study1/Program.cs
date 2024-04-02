@@ -315,32 +315,74 @@ namespace Study1
 
 
 
-            //サンプルコード
-            int[] myPos = { 20, 30 };
-            int[,] enemyPos =
+            //サンプルコード1
+            //int[] myPos = { 20, 30 };
+            //int[,] enemyPos =
+            //{
+            //    {2, 4},
+            //    {10, 6},
+            //    {25, 20}
+            //};
+
+            //int i;
+            //int dx, dy;
+            //double d;
+            //double r = 15; 
+            //for (i = 0; i < 3; i++)
+            //{
+            //    dx = myPos[0] - enemyPos[i, 0];
+            //    dy = myPos[1] - enemyPos[i, 1];
+            //    d = (double)(dx * dx + dy * dy);
+            //    if (d > r * r)
+            //    {
+            //        Console.WriteLine("敵" + i + "は射程圏外です");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("敵" + i + "は射程圏内です");
+            //    }
+            //}
+
+            //サンプルコード2
+
+            string[] names =
             {
-                {2, 4},
-                {10, 6},
-                {25, 20}
+                "向井　康二　", "目黒　蓮　", "阿部　亮平　", "渡辺　翔太　", "深澤　辰哉　", "佐久間　大介　", "宮舘　涼太　", "ラウール　", "岩本　照　"
             };
 
-            int i;
-            int dx, dy;
-            double d;
-            double r = 15; 
-            for (i = 0; i < 3; i++)
+            int[] scores =
             {
-                dx = myPos[0] - enemyPos[i, 0];
-                dy = myPos[1] - enemyPos[i, 1];
-                d = (double)(dx * dx + dy * dy);
-                if (d > r * r)
+                48, 75, 62, 90, 84, 28
+            };
+
+            int i, j;
+            string s;
+
+            for (i = 0; i < 6;  i++)
+            {
+                Console.WriteLine(names[i] + " " + scores[i] + " ");
+                for (j = 0; j < scores[i] / 5; j++)
                 {
-                    Console.WriteLine("敵" + i + "は射程圏外です");
+                    Console.WriteLine("*");
                 }
+                if (scores[i] < 50)
+                {
+                    s = "もう少し！";
+                }
+                else if (scores[i] < 70)
+                {
+                    s = "まあまあです";
+                }
+                else if (scores[i] < 90)
+                {
+                    s = "よくできました";
+                } 
                 else
                 {
-                    Console.WriteLine("敵" + i + "は射程圏内です");
+                    s = "たいへんよくできました！";
                 }
+
+                Console.WriteLine(" " + s);
             }
         }
     }
