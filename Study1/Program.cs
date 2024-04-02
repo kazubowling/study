@@ -363,7 +363,7 @@ namespace Study1
                 Console.WriteLine(names[i] + " " + scores[i] + " ");
                 for (j = 0; j < scores[i] / 5; j++)
                 {
-                    Console.WriteLine("*");
+                    Console.Write("*");
                 }
                 if (scores[i] < 50)
                 {
