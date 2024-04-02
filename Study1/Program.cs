@@ -295,22 +295,51 @@ namespace Study1
 
 
             //switch文
-            int a;
-            for (a = 5; a <= 10; a++)
-            {
-                Console.WriteLine(a + "÷ 3 = " + a / 3);
+            //int a;
+            //for (a = 5; a <= 10; a++)
+            //{
+            //    Console.WriteLine(a + "÷ 3 = " + a / 3);
 
-                switch (a % 3)
+            //    switch (a % 3)
+            //    {
+            //        case 1:
+            //            Console.WriteLine("：余りは1です。");
+            //            break;
+            //        case 2:
+            //            Console.WriteLine("余りは2です。");
+            //            break;
+            //        default:
+            //            Console.WriteLine("余りは0です。");
+            //            break;
+            //    }
+
+
+
+            //サンプルコード
+            int[] myPos = { 20, 30 };
+            int[,] enemyPos =
+            {
+                {2, 4},
+                {10, 6},
+                {25, 20}
+            };
+
+            int i;
+            int dx, dy;
+            double d;
+            double r = 15; 
+            for (i = 0; i < 3; i++)
+            {
+                dx = myPos[0] - enemyPos[i, 0];
+                dy = myPos[1] - enemyPos[i, 1];
+                d = (double)(dx * dx + dy * dy);
+                if (d > r * r)
                 {
-                    case 1:
-                        Console.WriteLine("：余りは1です。");
-                        break;
-                    case 2:
-                        Console.WriteLine("余りは2です。");
-                        break;
-                    default:
-                        Console.WriteLine("余りは0です。");
-                        break;
+                    Console.WriteLine("敵" + i + "は射程圏外です");
+                }
+                else
+                {
+                    Console.WriteLine("敵" + i + "は射程圏内です");
                 }
             }
         }
