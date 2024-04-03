@@ -184,8 +184,8 @@ namespace Study1
     //制御文
     class study3
     {
-        static void Main()
-        {
+        //static void Main()
+        //{
             //int a = 1999900024;
 
             //if ( a % 2 == 0 )
@@ -345,45 +345,65 @@ namespace Study1
 
             //サンプルコード2
 
-            string[] names =
-            {
-                "向井　康二　", "目黒　蓮　　", "阿部　亮平　", "渡辺　翔太　", "深澤　辰哉　", "佐久間　大介", "宮舘　涼太　", "ラウール　　", "岩本　照　　"
-            };
+            //string[] names =
+            //{
+            //    "向井　康二　", "目黒　蓮　　", "阿部　亮平　", "渡辺　翔太　", "深澤　辰哉　", "佐久間　大介", "宮舘　涼太　", "ラウール　　", "岩本　照　　"
+            //};
 
-            int[] scores =
-            {
-                48, 75, 62, 90, 84, 28, 35, 50, 89
-            };
+            //int[] scores =
+            //{
+            //    48, 75, 62, 90, 84, 28, 35, 50, 89
+            //};
 
-            int i, j;
-            string s;
+            //int i, j;
+            //string s;
 
-            for (i = 0; i < 9;  i++)
-            {
-                Console.Write(names[i] + " " + scores[i] + " ");
-                for (j = 0; j < scores[i] / 5; j++)
-                {
-                    Console.Write("*");
-                }
-                if (scores[i] < 50)
-                {
-                    s = "もう少し！";
-                }
-                else if (scores[i] < 70)
-                {
-                    s = "まあまあです";
-                }
-                else if (scores[i] < 90)
-                {
-                    s = "よくできました";
-                } 
-                else
-                {
-                    s = "たいへんよくできました！";
-                }
+            //for (i = 0; i < 9;  i++)
+            //{
+            //    Console.Write(names[i] + " " + scores[i] + " ");
+            //    for (j = 0; j < scores[i] / 5; j++)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    if (scores[i] < 50)
+            //    {
+            //        s = "もう少し！";
+            //    }
+            //    else if (scores[i] < 70)
+            //    {
+            //        s = "まあまあです";
+            //    }
+            //    else if (scores[i] < 90)
+            //    {
+            //        s = "よくできました";
+            //    } 
+            //    else
+            //    {
+            //        s = "たいへんよくできました！";
+            //    }
 
-                Console.WriteLine(" " + s);
-            }
+            //    Console.WriteLine(" " + s);
+            //}
+        //}
+    }
+
+    //フィールド
+    class field
+    {
+        public int month;
+        public int day;
+        public string sky;
+    }
+
+    class weather
+    {
+        static void Main()
+        {
+            field today = new field();
+            today.month = 11;
+            today.day = 1;
+            today.sky = "晴れ";
+            Console.WriteLine(today.month + " 月" + today.day + " 日" + today.sky);
         }
     }
 }
