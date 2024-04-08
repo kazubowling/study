@@ -398,14 +398,14 @@ namespace Study1
 
     class weather
     {
-        static void Main()
-        {
-            field today = new field();
-            today.month = 11;
-            today.day = 1;
-            today.sky = "晴れ";
-            Console.WriteLine(today.month + "月" + today.day + "日" + today.sky);
-        }
+        //static void Main()
+        //{
+        //    field today = new field();
+        //    today.month = 11;
+        //    today.day = 1;
+        //    today.sky = "晴れ";
+        //    Console.WriteLine(today.month + "月" + today.day + "日" + today.sky);
+        //}
     }
 
     class Cat
