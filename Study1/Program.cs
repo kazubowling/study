@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -386,7 +387,7 @@ namespace Study1
             //}
         //}
     }
-
+    //第4章
     //フィールド
     class field
     {
@@ -406,4 +407,50 @@ namespace Study1
             Console.WriteLine(today.month + "月" + today.day + "日" + today.sky);
         }
     }
-}
+
+    class Cat
+    {
+        string name;
+        string place;
+        int age;
+
+        public void setData(string n, string p, int a)
+        {
+            name = n;
+            place = p;
+            age = a;
+        }
+
+        public void print()
+        {
+            Console.WriteLine(place + ":" + name + " " + age + "歳");
+        }
+
+        public void print(string p, int a)
+        {
+            place = p;
+            Console.WriteLine(place + ":ねこは" + a + "匹です。");
+        }
+
+        public void print(string variety)
+        {
+            Console.WriteLine(place + ":" + name + " " + age + "歳" + variety);
+        }
+    }
+
+    class Pet
+    {
+        static void Main()
+        {
+            Cat cat1 = new Cat();
+            Cat cat2 = new Cat();
+            Cat cat3 = new Cat();
+
+            cat1.setData("ロビン", "う　ち", 10);
+            cat2.setData("ちび", "となり", 14);
+            cat1.print("雑種");
+            cat2.print();
+            cat3.print("う　ら", 0);
+        }
+    }
+}  
