@@ -389,12 +389,12 @@ namespace Study1
     }
     //第4章
     //フィールド
-    class field
-    {
-        public int month;
-        public int day;
-        public string sky;
-    }
+    //class field
+    //{
+    //    public int month;
+    //    public int day;
+    //    public string sky;
+    //}
 
     class weather
     {
@@ -408,54 +408,54 @@ namespace Study1
         //}
     }
 
-    namespace overload
-    {
-        class Cat
-        {
-            string name;
-            string place;
-            int age;
+    //namespace overload
+    //{
+    //    class Cat
+    //    {
+    //        string name;
+    //        string place;
+    //        int age;
 
-            public void setData(string n, string p, int a)
-            {
-                name = n;
-                place = p;
-                age = a;
-            }
+    //        public void setData(string n, string p, int a)
+    //        {
+    //            name = n;
+    //            place = p;
+    //            age = a;
+    //        }
 
-            public void print()
-            {
-                Console.WriteLine(place + ":" + name + " " + age + "歳");
-            }
+    //        public void print()
+    //        {
+    //            Console.WriteLine(place + ":" + name + " " + age + "歳");
+    //        }
 
-            public void print(string p, int a)
-            {
-                place = p;
-                Console.WriteLine(place + ":ねこは" + a + "匹です。");
-            }
+    //        public void print(string p, int a)
+    //        {
+    //            place = p;
+    //            Console.WriteLine(place + ":ねこは" + a + "匹です。");
+    //        }
 
-            public void print(string variety)
-            {
-                Console.WriteLine(place + ":" + name + " " + age + "歳" + variety);
-            }
-        }
+    //        public void print(string variety)
+    //        {
+    //            Console.WriteLine(place + ":" + name + " " + age + "歳" + variety);
+    //        }
+    //    }
 
-        class Pet
-        {
-            static void Main1()
-            {
-                Cat cat1 = new Cat();
-                Cat cat2 = new Cat();
-                Cat cat3 = new Cat();
+    //    class Pet
+    //    {
+    //        static void Main1()
+    //        {
+    //            Cat cat1 = new Cat();
+    //            Cat cat2 = new Cat();
+    //            Cat cat3 = new Cat();
 
-                cat1.setData("ロビン", "う　ち", 10);
-                cat2.setData("ちび", "となり", 14);
-                cat1.print("雑種");
-                cat2.print();
-                cat3.print("う　ら", 0);
-            }
-        }
-    }
+    //            cat1.setData("ロビン", "う　ち", 10);
+    //            cat2.setData("ちび", "となり", 14);
+    //            cat1.print("雑種");
+    //            cat2.print();
+    //            cat3.print("う　ら", 0);
+    //        }
+    //    }
+    //}
 
     //namespace constructor
     //{
@@ -512,7 +512,7 @@ namespace Study1
 
         class AromaSample
         {
-            public static void Main2()
+            public static void Main()
             {
                 Aroma aroma = new Aroma();
                 aroma.itteki = 0.05;
