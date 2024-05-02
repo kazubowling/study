@@ -491,32 +491,68 @@ namespace Study1
     //    }
     //}
 
-    namespace properties
+    //namespace properties
+    //{
+    //    class Aroma
+    //    {
+    //        public double drop; //値を格納するフィールド
+    //        public double itteki
+    //        {
+    //            get
+    //            {
+    //                return drop;
+    //            }
+
+    //            set
+    //            {
+    //                drop = value;
+    //            }
+    //        }
+    //    }
+
+    //    class AromaSample
+    //    {
+    //        public static void Main()
+    //        {
+    //            Aroma aroma = new Aroma();
+    //            aroma.itteki = 0.05;
+    //            Console.WriteLine("1滴あたり " + aroma.itteki + "mlです。");
+    //        }
+    //    }
+    //}
+
+    namespace indexer
     {
-        class Aroma
+        class Kazu1
         {
-            public double drop; //値を格納するフィールド
-            public double itteki
+            int[] suji = new int[4];
+            public int this[int i]
             {
                 get
                 {
-                    return drop;
+                    return suji[i];
                 }
 
                 set
                 {
-                    drop = value;
+                    suji[i] = value;
                 }
             }
         }
 
-        class AromaSample
+        class Kazu2
         {
-            public static void Main()
+            static void Main()
             {
-                Aroma aroma = new Aroma();
-                aroma.itteki = 0.05;
-                Console.WriteLine("1滴あたり " + aroma.itteki + "mlです。");
+                Kazu1 kz = new Kazu1();
+                kz[0] = 1;
+                kz[1] = 2;
+                kz[2] = 3;
+                kz[3] = 4;
+                for (int i = 0; i <= 3; i++)
+                {
+                    Console.WriteLine(kz[i]);
+                }
             }
         }
     }
