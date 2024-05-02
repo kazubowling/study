@@ -521,40 +521,62 @@ namespace Study1
     //    }
     //}
 
-    namespace indexer
+    //namespace indexer
+    //{
+    //    class Kazu1
+    //    {
+    //        int[] suji = new int[4];
+    //        public int this[int i]
+    //        {
+    //            get
+    //            {
+    //                return suji[i];
+    //            }
+
+    //            set
+    //            {
+    //                suji[i] = value;
+    //            }
+    //        }
+    //    }
+
+    //    class Kazu2
+    //    {
+    //        static void Main()
+    //        {
+    //            Kazu1 kz = new Kazu1();
+    //            kz[0] = 1;
+    //            kz[1] = 2;
+    //            kz[2] = 3;
+    //            kz[3] = 4;
+    //            for (int i = 0; i <= 3; i++)
+    //            {
+    //                Console.WriteLine(kz[i]);
+    //            }
+    //        }
+    //    }
+    //}
+
+    namespace cmdline
     {
-        class Kazu1
+        class Cmdline
         {
-            int[] suji = new int[4];
-            public int this[int i]
+            static void Main(string[] args)
             {
-                get
-                {
-                    return suji[i];
-                }
+                int i;
 
-                set
+                if (args.Length == 0)
                 {
-                    suji[i] = value;
-                }
-            }
-        }
-
-        class Kazu2
-        {
-            static void Main()
-            {
-                Kazu1 kz = new Kazu1();
-                kz[0] = 1;
-                kz[1] = 2;
-                kz[2] = 3;
-                kz[3] = 4;
-                for (int i = 0; i <= 3; i++)
+                    Console.WriteLine("コマンド引数はありません");
+                } 
+                else
                 {
-                    Console.WriteLine(kz[i]);
+                    for (i = 0; i < args.Length; i++)
+                    {
+                        Console.WriteLine((i+1) + "：" + args[i]);
+                    }
                 }
             }
         }
     }
-    
 }  
