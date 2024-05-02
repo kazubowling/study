@@ -663,7 +663,7 @@ namespace Study1
             public void printNov()
             {
                 printBook();
-                Console.Writeline("著　　者：" + writer);
+                Console.WriteLine("著　　者：" + writer);
             }
         }
 
