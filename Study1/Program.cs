@@ -580,65 +580,120 @@ namespace Study1
     //    }
     //}
 
-    namespace sample2
+    // namespace sample2
+    // {
+    //     class Engine
+    //     {
+    //         string name;
+    //         int size;
+
+    //         public Engine(string n, int s)
+    //         { //コンストラクタ
+    //             name = n;
+    //             size = s;
+    //         }
+
+    //         public int Size
+    //         {
+    //             get
+    //             {
+    //                 return size;
+    //             }
+
+    //         }
+    //     }
+
+    //     class Car
+    //     {
+    //         string name;
+    //         Engine engine;
+
+    //         public Car(string n, Engine e)
+    //         { //コンストラクタ
+    //             name = n;
+    //             engine = e;
+    //         }
+
+    //         public void printInfo()
+    //         {
+    //             Console.WriteLine(name + "(" + engine.Size + "cc)");
+    //         }
+    //     }
+
+    //     //Main()メソッドのクラス
+    //     class Program
+    //     {
+    //         static void Main()
+    //         {
+    //             Engine blf = new Engine("BLF", 1597);
+    //             Engine bvy = new Engine("BVY", 1984);
+    //             Engine blg = new Engine("BLG", 1389);
+
+    //             Car[] cars = new Car[4]; //Carクラスの配列を用意
+    //             cars[0] = new Car("GOLF E", blf);
+    //             cars[1] = new Car("GOLF GLI", bvy);
+    //             cars[2] = new Car("GOLF GT TSI", blg);
+    //             cars[3] = new Car("GOLF Octave", blf);
+
+    //             foreach (Car car in cars)
+    //             {
+    //                 car.printInfo();
+    //             }
+    //         }
+    //     }
+    // }
+
+    namespace inheritance
     {
-        class Engine
+        class book
         {
-            string name;
-            int size;
+            public string title;
+            public string genre;
 
-            public Engine(string n, int s)
-            { //コンストラクタ
-                name = n;
-                size = s;
-            }
-
-            public int Size
+            public void printBook()
             {
-                get
-                {
-                    return size;
-                }
-
+                Console.WriteLine("タイトル：" + title);
+                Console.WriteLine("ジャンル：" + genre);
             }
         }
 
-        class Car
+        class Novel : book
         {
-            string name;
-            Engine engine;
-
-            public Car(string n, Engine e)
-            { //コンストラクタ
-                name = n;
-                engine = e;
-            }
-
-            public void printInfo()
+            public string writer;
+            public void printNov()
             {
-                Console.WriteLine(name + "(" + engine.Size + "cc)");
+                printBook();
+                Console.Writeline("著　　者：" + writer);
             }
         }
 
-        //Main()メソッドのクラス
-        class Program
+        class Magazine : book
         {
-            static void Main()
+            public int day;
+            public void printMag()
             {
-                Engine blf = new Engine("BLF", 1597);
-                Engine bvy = new Engine("BVY", 1984);
-                Engine blg = new Engine("BLG", 1389);
+                printBook();
+                Console.WriteLine("発売日：" + day + "日");
+            }
+        }
 
-                Car[] cars = new Car[4]; //Carクラスの配列を用意
-                cars[0] = new Car("GOLF E", blf);
-                cars[1] = new Car("GOLF GLI", bvy);
-                cars[2] = new Car("GOLF GT TSI", blg);
-                cars[3] = new Car("GOLF Octave", blf);
+        class Bookshelf
+        {
+            public static void Main()
+            {
+                Novel nov = new Novel();
+                    nov.title = " しおりの秘境発見";
+                    nov.genre = " ファンタジー";
+                    nov.writer = " アンク";                
 
-                foreach (Car car in cars)
-                {
-                    car.printInfo();
-                }
+                Magazine mag = new Magazine();
+                    mag.title = "月刊C#の絵本";
+                    mag.genre = "コンピュータ";
+                    mag.day = 20;
+
+                nov.printNov();
+                Console.WriteLine();
+                mag.printMag();
             }
         }
     }
