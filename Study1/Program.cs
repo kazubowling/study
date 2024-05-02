@@ -490,5 +490,35 @@ namespace Study1
             }
         }
     }
+
+    namespace properties
+    {
+        class Aroma
+        {
+            public double drop; //値を格納するフィールド
+            public double itteki
+            {
+                get
+                {
+                    return drop;
+                }
+
+                set
+                {
+                    drop = value;
+                }
+            }
+        }
+
+        class AromaSample
+        {
+            public static void Main2()
+            {
+                Aroma aroma = new Aroma();
+                aroma.itteki = 0.05;
+                Console.WriteLine("1滴あたり " + aroma.itteki + "mlです。");
+            }
+        }
+    }
     
 }  
