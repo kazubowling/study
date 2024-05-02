@@ -442,7 +442,7 @@ namespace Study1
 
         class Pet
         {
-            static void Main()
+            static void Main1()
             {
                 Cat cat1 = new Cat();
                 Cat cat2 = new Cat();
