@@ -557,24 +557,87 @@ namespace Study1
     //    }
     //}
 
-    namespace cmdline
-    {
-        class Cmdline
-        {
-            static void Main(string[] args)
-            {
-                int i;
+    //namespace cmdline
+    //{
+    //    class Cmdline
+    //    {
+    //        static void Main(string[] args)
+    //        {
+    //            int i;
 
-                if (args.Length == 0)
+    //            if (args.Length == 0)
+    //            {
+    //                Console.WriteLine("コマンド引数はありません");
+    //            } 
+    //            else
+    //            {
+    //                for (i = 0; i < args.Length; i++)
+    //                {
+    //                    Console.WriteLine((i+1) + "：" + args[i]);
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
+
+    namespace sample2
+    {
+        class Engine
+        {
+            string name;
+            int size;
+
+            public Engine(string n, int s)
+            { //コンストラクタ
+                name = n;
+                size = s;
+            }
+
+            public int Size
+            {
+                get
                 {
-                    Console.WriteLine("コマンド引数はありません");
-                } 
-                else
+                    return size;
+                }
+
+            }
+        }
+
+        class Car
+        {
+            string name;
+            Engine engine;
+
+            public Car(string n, Engine e)
+            { //コンストラクタ
+                name = n;
+                engine = e;
+            }
+
+            public void printInfo()
+            {
+                Console.WriteLine(name + "(" + engine.Size + "cc)");
+            }
+        }
+
+        //Main()メソッドのクラス
+        class Program
+        {
+            static void Main()
+            {
+                Engine blf = new Engine("BLF", 1597);
+                Engine bvy = new Engine("BVY", 1984);
+                Engine blg = new Engine("BLG", 1389);
+
+                Car[] cars = new Car[4]; //Carクラスの配列を用意
+                cars[0] = new Car("GOLF E", blf);
+                cars[1] = new Car("GOLF GLI", bvy);
+                cars[2] = new Car("GOLF GT TSI", blg);
+                cars[3] = new Car("GOLF Octave", blf);
+
+                foreach (Car car in cars)
                 {
-                    for (i = 0; i < args.Length; i++)
-                    {
-                        Console.WriteLine((i+1) + "：" + args[i]);
-                    }
+                    car.printInfo();
                 }
             }
         }
