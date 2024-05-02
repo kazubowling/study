@@ -457,39 +457,39 @@ namespace Study1
         }
     }
 
-    namespace constructor
-    {
-        class Book
-        {
-            public int price;
-            public int num = 0;
-            public string title;
+    //namespace constructor
+    //{
+    //    class Book
+    //    {
+    //        public int price;
+    //        public int num = 0;
+    //        public string title;
 
-            public Book(string t, int p)
-            {
-                title = t; 
-                price = p;
-            }
+    //        public Book(string t, int p)
+    //        {
+    //            title = t; 
+    //            price = p;
+    //        }
 
-            public void print()
-            {
-                Console.WriteLine("タイトル：" + title);
-                Console.WriteLine("定　　価：" + price);
-                Console.WriteLine("注文部数：" + num);
-                Console.WriteLine("合計金額：" + price * num);
-            }
-        }
+    //        public void print()
+    //        {
+    //            Console.WriteLine("タイトル：" + title);
+    //            Console.WriteLine("定　　価：" + price);
+    //            Console.WriteLine("注文部数：" + num);
+    //            Console.WriteLine("合計金額：" + price * num);
+    //        }
+    //    }
 
-        class Books
-        {
-            static void Main()
-            {
-                Book book = new Book("Cの絵本", 1380);
-                book.num = 10;
-                book.print();
-            }
-        }
-    }
+    //    class Books
+    //    {
+    //        static void Main()
+    //        {
+    //            Book book = new Book("Cの絵本", 1380);
+    //            book.num = 10;
+    //            book.print();
+    //        }
+    //    }
+    //}
 
     namespace properties
     {
