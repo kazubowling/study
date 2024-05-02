@@ -408,49 +408,87 @@ namespace Study1
         //}
     }
 
-    class Cat
+    namespace overload
     {
-        string name;
-        string place;
-        int age;
-
-        public void setData(string n, string p, int a)
+        class Cat
         {
-            name = n;
-            place = p;
-            age = a;
+            string name;
+            string place;
+            int age;
+
+            public void setData(string n, string p, int a)
+            {
+                name = n;
+                place = p;
+                age = a;
+            }
+
+            public void print()
+            {
+                Console.WriteLine(place + ":" + name + " " + age + "歳");
+            }
+
+            public void print(string p, int a)
+            {
+                place = p;
+                Console.WriteLine(place + ":ねこは" + a + "匹です。");
+            }
+
+            public void print(string variety)
+            {
+                Console.WriteLine(place + ":" + name + " " + age + "歳" + variety);
+            }
         }
 
-        public void print()
+        class Pet
         {
-            Console.WriteLine(place + ":" + name + " " + age + "歳");
-        }
+            static void Main()
+            {
+                Cat cat1 = new Cat();
+                Cat cat2 = new Cat();
+                Cat cat3 = new Cat();
 
-        public void print(string p, int a)
-        {
-            place = p;
-            Console.WriteLine(place + ":ねこは" + a + "匹です。");
-        }
-
-        public void print(string variety)
-        {
-            Console.WriteLine(place + ":" + name + " " + age + "歳" + variety);
+                cat1.setData("ロビン", "う　ち", 10);
+                cat2.setData("ちび", "となり", 14);
+                cat1.print("雑種");
+                cat2.print();
+                cat3.print("う　ら", 0);
+            }
         }
     }
 
-    class Pet
+    namespace constructor
     {
-        static void Main()
+        class Book
         {
-            Cat cat1 = new Cat();
-            Cat cat2 = new Cat();
-            Cat cat3 = new Cat();
+            public int price;
+            public int num = 0;
+            public string title;
 
-            cat1.setData("ロビン", "う　ち", 10);
-            cat2.setData("ちび", "となり", 14);
-            cat1.print("雑種");
-            cat2.print();
-            cat3.print("う　ら", 0);
+            public Book(string t, int p)
+            {
+                title = t; 
+                price = p;
+            }
+
+            public void print()
+            {
+                Console.WriteLine("タイトル：" + title);
+                Console.WriteLine("定　　価：" + price);
+                Console.WriteLine("注文部数：" + num);
+                Console.WriteLine("合計金額：" + price * num);
+            }
+        }
+
+        class Books
+        {
+            static void Main()
+            {
+                Book book = new Book("Cの絵本", 1380);
+                book.num = 10;
+                book.print();
+            }
         }
     }
+    
 }  
