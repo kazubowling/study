@@ -643,57 +643,164 @@ namespace Study1
     //     }
     // }
 
-    namespace inheritance
+    //namespace inheritance
+    //{
+    //    class book
+    //    {
+    //        public string title;
+    //        public string genre;
+
+    //        public void printBook()
+    //        {
+    //            Console.WriteLine("タイトル：" + title);
+    //            Console.WriteLine("ジャンル：" + genre);
+    //        }
+    //    }
+
+    //    class Novel : book
+    //    {
+    //        public string writer;
+    //        public void printNov()
+    //        {
+    //            printBook();
+    //            Console.WriteLine("著　　者：" + writer);
+    //        }
+    //    }
+
+    //    class Magazine : book
+    //    {
+    //        public int day;
+    //        public void printMag()
+    //        {
+    //            printBook();
+    //            Console.WriteLine("発売日：" + day + "日");
+    //        }
+    //    }
+
+    //    class Bookshelf
+    //    {
+    //        public static void Main()
+    //        {
+    //            Novel nov = new Novel();
+    //                nov.title = " しおりの秘境発見";
+    //                nov.genre = " ファンタジー";
+    //                nov.writer = " アンク";                
+
+    //            Magazine mag = new Magazine();
+    //                mag.title = "月刊C#の絵本";
+    //                mag.genre = "コンピュータ";
+    //                mag.day = 20;
+
+    //            nov.printNov();
+    //            Console.WriteLine();
+    //            mag.printMag();
+    //        }
+    //    }
+    //}
+
+    //namespace modifier
+    //{
+    //    class Purse
+    //    {
+    //        public static int money = 0;
+
+    //        public void printMoney(int In, int Out)
+    //        {
+    //            money = money + In - Out;
+    //            if(money < 0)
+    //            {
+    //                Console.WriteLine((-1 * money) + "円足りません。");
+    //            } 
+    //            else
+    //            {
+    //                Console.WriteLine("残金は" + money + "円です。");
+    //            }
+    //        }
+    //    }
+
+    //    class shopping
+    //    {
+    //        public static void Main()
+    //        {
+    //            Purse store1 = new Purse();
+    //            Purse store2 = new Purse();
+    //            store1.printMoney(1000, 100);
+    //            store2.printMoney(0, 250);
+    //            store1.printMoney(0, 800);
+    //        }
+    //    }
+    //}
+
+    //namespace constructor2
+    //{
+    //    class Calc1
+    //    {
+    //        public int x;
+    //        public Calc1(int a, int b) 
+    //        {
+    //            x = a + b;
+    //        }
+    //    }
+
+    //    class Calc2 : Calc1
+    //    {
+    //        public Calc2(int c, int d) : base(c, d) { }
+    //    }
+
+    //    class Calc3
+    //    {
+    //        public static void Main()
+    //        {
+    //            Calc2 calc2 = new Calc2(1, 2);
+    //            Console.WriteLine(calc2.x);
+    //        }
+    //    }
+    //}
+
+    //namespace hiding
+    //{
+    //    class A
+    //    {
+    //        public int a = 3;
+    //    }
+
+    //    class B : A
+    //    {
+    //        new public int a = 100;
+    //    }
+
+    //    class C
+    //    {
+    //        public static void Main()
+    //        {
+    //            B b = new B();
+    //            Console.WriteLine(b.a);
+    //        }
+    //    }
+    //}
+
+    namespace hiding2
     {
-        class book
+        class A
         {
-            public string title;
-            public string genre;
+            public int a = 3;
+        }
 
-            public void printBook()
+        class B : A
+        {
+            new public int a = 100;
+            public void print()
             {
-                Console.WriteLine("タイトル：" + title);
-                Console.WriteLine("ジャンル：" + genre);
+                Console.WriteLine("Aクラスのaは" + base.a);
             }
         }
 
-        class Novel : book
-        {
-            public string writer;
-            public void printNov()
-            {
-                printBook();
-                Console.WriteLine("著　　者：" + writer);
-            }
-        }
-
-        class Magazine : book
-        {
-            public int day;
-            public void printMag()
-            {
-                printBook();
-                Console.WriteLine("発売日：" + day + "日");
-            }
-        }
-
-        class Bookshelf
+        class C
         {
             public static void Main()
             {
-                Novel nov = new Novel();
-                    nov.title = " しおりの秘境発見";
-                    nov.genre = " ファンタジー";
-                    nov.writer = " アンク";                
-
-                Magazine mag = new Magazine();
-                    mag.title = "月刊C#の絵本";
-                    mag.genre = "コンピュータ";
-                    mag.day = 20;
-
-                nov.printNov();
-                Console.WriteLine();
-                mag.printMag();
+                B b = new B();
+                b.print();
             }
         }
     }
