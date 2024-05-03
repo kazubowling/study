@@ -643,6 +643,7 @@ namespace Study1
     //     }
     // }
 
+    //第5章クラスの継承
     //namespace inheritance
     //{
     //    class book
@@ -779,28 +780,62 @@ namespace Study1
     //    }
     //}
 
-    namespace hiding2
-    {
-        class A
-        {
-            public int a = 3;
-        }
+    //namespace hiding2
+    //{
+    //    class A
+    //    {
+    //        public int a = 3;
+    //    }
 
-        class B : A
+    //    class B : A
+    //    {
+    //        new public int a = 100;
+    //        public void print()
+    //        {
+    //            Console.WriteLine("Aクラスのaは" + base.a);
+    //        }
+    //    }
+
+    //    class C
+    //    {
+    //        public static void Main()
+    //        {
+    //            B b = new B();
+    //            b.print();
+    //        }
+    //    }
+    //}
+
+    namespace over_ride
+    {
+        class Greeting
         {
-            new public int a = 100;
-            public void print()
+            public virtual void bye()
             {
-                Console.WriteLine("Aクラスのaは" + base.a);
+                Console.WriteLine("good bye");
             }
         }
 
-        class C
+        class Aisatsu : Greeting
+        {
+            public override void bye()
+            {
+                Console.WriteLine("さようなら");
+            }
+
+            public void cheer()
+            {
+                Console.WriteLine("元気でね！");
+            }
+        }
+
+        class Owakare
         {
             public static void Main()
             {
-                B b = new B();
-                b.print();
+                Aisatsu aisatsu = new Aisatsu();
+                aisatsu.bye();
+                aisatsu.cheer();
             }
         }
     }
