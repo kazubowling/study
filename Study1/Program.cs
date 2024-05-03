@@ -806,36 +806,102 @@ namespace Study1
     //    }
     //}
 
-    namespace over_ride
+    //namespace over_ride
+    //{
+    //    class Greeting
+    //    {
+    //        public virtual void bye()
+    //        {
+    //            Console.WriteLine("good bye");
+    //        }
+    //    }
+
+    //    class Aisatsu : Greeting
+    //    {
+    //        public override void bye()
+    //        {
+    //            Console.WriteLine("さようなら");
+    //        }
+
+    //        public void cheer()
+    //        {
+    //            Console.WriteLine("元気でね！");
+    //        }
+    //    }
+
+    //    class Owakare
+    //    {
+    //        public static void Main()
+    //        {
+    //            Aisatsu aisatsu = new Aisatsu();
+    //            aisatsu.bye();
+    //            aisatsu.cheer();
+    //        }
+    //    }
+    //}
+
+    namespace indexeroverride
     {
-        class Greeting
+        class Word1
         {
-            public virtual void bye()
+            public char[] word = new char[7];
+            
+            public virtual char this[int i]
             {
-                Console.WriteLine("good bye");
+                get
+                {
+                    return word[i];
+                }
+
+                set
+                {
+                    if(i >= 0)
+                    {
+                        word[i] = value;
+                    }
+                }
             }
         }
 
-        class Aisatsu : Greeting
+        class Word2 : Word1
         {
-            public override void bye()
+            public override char this[int i]
             {
-                Console.WriteLine("さようなら");
-            }
+                get
+                {
+                    return word[i];
+                }
 
-            public void cheer()
-            {
-                Console.WriteLine("元気でね！");
+                set
+                {
+                    if (i >= 3)
+                    {
+                        word[i] = value;
+                    }
+                }
             }
         }
 
-        class Owakare
+        class WordSample
         {
-            public static void Main()
+            static void Main()
             {
-                Aisatsu aisatsu = new Aisatsu();
-                aisatsu.bye();
-                aisatsu.cheer();
+                Word2 word2 = new Word2();
+
+                word2[0] = 'k';
+                word2[1] = 'e';
+                word2[2] = 'y';
+                word2[3] = 'w';
+                word2[4] = 'o';
+                word2[5] = 'r';
+                word2[6] = 'd';
+
+                int i;
+                for(i = 0; i <= 6; i++)
+                {
+                    Console.Write(word2[i]);
+                }
+                Console.WriteLine("\n");
             }
         }
     }
