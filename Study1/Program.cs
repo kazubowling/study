@@ -840,68 +840,150 @@ namespace Study1
     //    }
     //}
 
-    namespace indexeroverride
+    //namespace indexeroverride
+    //{
+    //    class Word1
+    //    {
+    //        public char[] word = new char[7];
+
+    //        public virtual char this[int i]
+    //        {
+    //            get
+    //            {
+    //                return word[i];
+    //            }
+
+    //            set
+    //            {
+    //                if(i >= 0)
+    //                {
+    //                    word[i] = value;
+    //                }
+    //            }
+    //        }
+    //    }
+
+    //    class Word2 : Word1
+    //    {
+    //        public override char this[int i]
+    //        {
+    //            get
+    //            {
+    //                return word[i];
+    //            }
+
+    //            set
+    //            {
+    //                if (i >= 3)
+    //                {
+    //                    word[i] = value;
+    //                }
+    //            }
+    //        }
+    //    }
+
+    //    class WordSample
+    //    {
+    //        static void Main()
+    //        {
+    //            Word2 word2 = new Word2();
+
+    //            word2[0] = 'k';
+    //            word2[1] = 'e';
+    //            word2[2] = 'y';
+    //            word2[3] = 'w';
+    //            word2[4] = 'o';
+    //            word2[5] = 'r';
+    //            word2[6] = 'd';
+
+    //            int i;
+    //            for(i = 0; i <= 6; i++)
+    //            {
+    //                Console.Write(word2[i]);
+    //            }
+    //            Console.WriteLine("\n");
+    //        }
+    //    }
+    //}
+
+
+    namespace sample5
     {
-        class Word1
+        //定規クラス(基本クラス)
+        class Ruler
         {
-            public char[] word = new char[7];
-            
-            public virtual char this[int i]
-            {
-                get
-                {
-                    return word[i];
-                }
+            protected string material = "プラスティック"; //材質
 
-                set
-                {
-                    if(i >= 0)
-                    {
-                        word[i] = value;
-                    }
-                }
+            protected string getInfo()
+            {
+                return "材料は" + material + "です。";
             }
         }
 
-        class Word2 : Word1
+        //三角定規クラス
+        class TriangleRuler : Ruler
         {
-            public override char this[int i]
-            {
-                get
-                {
-                    return word[i];
-                }
+            double[] angles = new double[3]; //三角
+            double short_side; //短い辺
 
-                set
-                {
-                    if (i >= 3)
-                    {
-                        word[i] = value;
-                    }
-                }
+            public TriangleRuler(double a1, double a2, double s)
+            {
+                angles[0] = a1;
+                angles[1] = a2;
+                angles[2] = 180.0 - a1 - a2;
+                short_side = s;
+            }
+
+            public TriangleRuler(double a1, double a2, double s, string m)
+            {
+                angles[0] = a1;
+                angles[1] = a2;
+                angles[2] = 180.0 - a1 - a2;
+                short_side = s;
+                material = m;
+            }
+
+            public new string getInfo()
+            {
+                string s;
+                s = "この三角定規は、３頂点の角度がそれぞれ" + angles[0] + "°," + angles[1] + "°," + angles[2] + "°で、一番短い辺の長さは" + short_side + "mmです。";
+                s += base.getInfo();
+                return s;
+            }
+        }
+        //直線定規クラス
+        class LineRuler : Ruler
+        {
+            int length; //測れる長さ
+
+            public LineRuler(int l, string m)
+            {
+                length = l;
+                material = m;
+            }
+
+            public new string getInfo()
+            {
+                string s;
+                s = "この直線定規は" + length / 10.0 + "cmまで測れます。";
+                s += base.getInfo();
+                return s;
             }
         }
 
-        class WordSample
+        //Main()メソッドのクラス
+        class Program
         {
             static void Main()
             {
-                Word2 word2 = new Word2();
-
-                word2[0] = 'k';
-                word2[1] = 'e';
-                word2[2] = 'y';
-                word2[3] = 'w';
-                word2[4] = 'o';
-                word2[5] = 'r';
-                word2[6] = 'd';
-
-                int i;
-                for(i = 0; i <= 6; i++)
-                {
-                    Console.Write(word2[i]);
-                }
-                Console.WriteLine("\n");
+                TriangleRuler tr1 = new TriangleRuler(45.0, 45.0, 150.0);
+                TriangleRuler tr2 = new TriangleRuler(45.0, 45.0, 200.0, "ステレンス");
+                TriangleRuler tr3 = new TriangleRuler(30.0, 60.0, 100.0);
+                LineRuler lr1 = new LineRuler(300, "竹");
+                Console.WriteLine(tr1.getInfo());
+                Console.WriteLine(tr2.getInfo());
+                Console.WriteLine(tr3.getInfo());
+                Console.WriteLine(lr1.getInfo());
             }
         }
     }
