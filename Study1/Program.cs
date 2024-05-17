@@ -907,83 +907,117 @@ namespace Study1
     //}
 
 
-    namespace sample5
+    //namespace sample5
+    //{
+    //    //定規クラス(基本クラス)
+    //    class Ruler
+    //    {
+    //        protected string material = "プラスティック"; //材質
+
+    //        protected string getInfo()
+    //        {
+    //            return "材料は" + material + "です。";
+    //        }
+    //    }
+
+    //    //三角定規クラス
+    //    class TriangleRuler : Ruler
+    //    {
+    //        double[] angles = new double[3]; //三角
+    //        double short_side; //短い辺
+
+    //        public TriangleRuler(double a1, double a2, double s)
+    //        {
+    //            angles[0] = a1;
+    //            angles[1] = a2;
+    //            angles[2] = 180.0 - a1 - a2;
+    //            short_side = s;
+    //        }
+
+    //        public TriangleRuler(double a1, double a2, double s, string m)
+    //        {
+    //            angles[0] = a1;
+    //            angles[1] = a2;
+    //            angles[2] = 180.0 - a1 - a2;
+    //            short_side = s;
+    //            material = m;
+    //        }
+
+    //        public new string getInfo()
+    //        {
+    //            string s;
+    //            s = "この三角定規は、３頂点の角度がそれぞれ" + angles[0] + "°," + angles[1] + "°," + angles[2] + "°で、一番短い辺の長さは" + short_side + "mmです。";
+    //            s += base.getInfo();
+    //            return s;
+    //        }
+    //    }
+    //    //直線定規クラス
+    //    class LineRuler : Ruler
+    //    {
+    //        int length; //測れる長さ
+
+    //        public LineRuler(int l, string m)
+    //        {
+    //            length = l;
+    //            material = m;
+    //        }
+
+    //        public new string getInfo()
+    //        {
+    //            string s;
+    //            s = "この直線定規は" + length / 10.0 + "cmまで測れます。";
+    //            s += base.getInfo();
+    //            return s;
+    //        }
+    //    }
+
+    //    //Main()メソッドのクラス
+    //    class Program
+    //    {
+    //        static void Main()
+    //        {
+    //            TriangleRuler tr1 = new TriangleRuler(45.0, 45.0, 150.0);
+    //            TriangleRuler tr2 = new TriangleRuler(45.0, 45.0, 200.0, "ステレンス");
+    //            TriangleRuler tr3 = new TriangleRuler(30.0, 60.0, 100.0);
+    //            LineRuler lr1 = new LineRuler(300, "竹");
+    //            Console.WriteLine(tr1.getInfo());
+    //            Console.WriteLine(tr2.getInfo());
+    //            Console.WriteLine(tr3.getInfo());
+    //            Console.WriteLine(lr1.getInfo());
+    //        }
+    //    }
+    //}
+
+    namespace Section_6
     {
-        //定規クラス(基本クラス)
-        class Ruler
+        abstract class CalcA
         {
-            protected string material = "プラスティック"; //材質
+            public int a;
+            public int b;
+            public abstract void answer();
 
-            protected string getInfo()
+            public void setData(int m, int n)
             {
-                return "材料は" + material + "です。";
+                a = m;
+                b = n;
             }
         }
 
-        //三角定規クラス
-        class TriangleRuler : Ruler
+        class Plus : CalcA
         {
-            double[] angles = new double[3]; //三角
-            double short_side; //短い辺
-
-            public TriangleRuler(double a1, double a2, double s)
+            public override void answer()
             {
-                angles[0] = a1;
-                angles[1] = a2;
-                angles[2] = 180.0 - a1 - a2;
-                short_side = s;
-            }
-
-            public TriangleRuler(double a1, double a2, double s, string m)
-            {
-                angles[0] = a1;
-                angles[1] = a2;
-                angles[2] = 180.0 - a1 - a2;
-                short_side = s;
-                material = m;
-            }
-
-            public new string getInfo()
-            {
-                string s;
-                s = "この三角定規は、３頂点の角度がそれぞれ" + angles[0] + "°," + angles[1] + "°," + angles[2] + "°で、一番短い辺の長さは" + short_side + "mmです。";
-                s += base.getInfo();
-                return s;
-            }
-        }
-        //直線定規クラス
-        class LineRuler : Ruler
-        {
-            int length; //測れる長さ
-
-            public LineRuler(int l, string m)
-            {
-                length = l;
-                material = m;
-            }
-
-            public new string getInfo()
-            {
-                string s;
-                s = "この直線定規は" + length / 10.0 + "cmまで測れます。";
-                s += base.getInfo();
-                return s;
+                Console.WriteLine(a + "+" + b + "=" + (a + b));
             }
         }
 
-        //Main()メソッドのクラス
-        class Program
+        class AbstSample
         {
             static void Main()
             {
-                TriangleRuler tr1 = new TriangleRuler(45.0, 45.0, 150.0);
-                TriangleRuler tr2 = new TriangleRuler(45.0, 45.0, 200.0, "ステレンス");
-                TriangleRuler tr3 = new TriangleRuler(30.0, 60.0, 100.0);
-                LineRuler lr1 = new LineRuler(300, "竹");
-                Console.WriteLine(tr1.getInfo());
-                Console.WriteLine(tr2.getInfo());
-                Console.WriteLine(tr3.getInfo());
-                Console.WriteLine(lr1.getInfo());
+                Plus plus = new Plus();
+                plus.setData(27, 32);
+                plus.answer();
             }
         }
     }
