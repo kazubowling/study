@@ -990,34 +990,76 @@ namespace Study1
 
     namespace Section_6
     {
-        abstract class CalcA
+        //    abstract class CalcA
+        //    {
+        //        public int a;
+        //        public int b;
+        //        public abstract void answer();
+
+        //        public void setData(int m, int n)
+        //        {
+        //            a = m;
+        //            b = n;
+        //        }
+        //    }
+
+        //    class Plus : CalcA
+        //    {
+        //        public override void answer()
+        //        {
+        //            Console.WriteLine(a + "+" + b + "=" + (a + b));
+        //        }
+        //    }
+
+        //    class AbstSample
+        //    {
+        //        static void Main()
+        //        {
+        //            Plus plus = new Plus();
+        //            plus.setData(27, 32);
+        //            plus.answer();
+        //        }
+        //    }
+        //}
+
+        interface A
         {
-            public int a;
+            void say();
+            int prop
+            {
+                get;
+                set;
+            }
+        }
+
+        class X : A
+        {
             public int b;
-            public abstract void answer();
-
-            public void setData(int m, int n)
+            public void say()
             {
-                a = m;
-                b = n;
+                Console.WriteLine("Hello");
+            }
+            public int prop
+            {
+                get
+                {
+                    return b;
+                }
+                set
+                {
+                    b = value;
+                }
             }
         }
 
-        class Plus : CalcA
-        {
-            public override void answer()
-            {
-                Console.WriteLine(a + "+" + b + "=" + (a + b));
-            }
-        }
-
-        class AbstSample
+        class IFSample
         {
             static void Main()
             {
-                Plus plus = new Plus();
-                plus.setData(27, 32);
-                plus.answer();
+                X x = new X();
+                x.say();
+                x.prop = 52;
+                Console.WriteLine(x.prop);
             }
         }
     }
