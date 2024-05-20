@@ -1022,44 +1022,76 @@ namespace Study1
         //    }
         //}
 
-        interface A
+        //interface A
+        //{
+        //    void say();
+        //    int prop
+        //    {
+        //        get;
+        //        set;
+        //    }
+        //}
+
+        //class X : A
+        //{
+        //    public int b;
+        //    public void say()
+        //    {
+        //        Console.WriteLine("Hello");
+        //    }
+        //    public int prop
+        //    {
+        //        get
+        //        {
+        //            return b;
+        //        }
+        //        set
+        //        {
+        //            b = value;
+        //        }
+        //    }
+        //}
+
+        //class IFSample
+        //{
+        //    static void Main()
+        //    {
+        //        X x = new X();
+        //        x.say();
+        //        x.prop = 52;
+        //        Console.WriteLine(x.prop);
+        //    }
+        //}
+
+        interface Greet
         {
-            void say();
-            int prop
+            void greet();
+        }
+        
+        interface  Bye : Greet 
+        {
+            void bye();
+        }
+        
+        class Greeting : Bye
+        {
+            public void greet()
             {
-                get;
-                set;
+                Console.WriteLine("こんにちは！");
+            }
+            public void bye()
+            {
+                Console.WriteLine("さよなら");
             }
         }
 
-        class X : A
-        {
-            public int b;
-            public void say()
-            {
-                Console.WriteLine("Hello");
-            }
-            public int prop
-            {
-                get
-                {
-                    return b;
-                }
-                set
-                {
-                    b = value;
-                }
-            }
-        }
-
-        class IFSample
+        class Meet
         {
             static void Main()
             {
-                X x = new X();
-                x.say();
-                x.prop = 52;
-                Console.WriteLine(x.prop);
+                Greeting greeting = new Greeting();
+                greeting.greet();
+                greeting.bye();
             }
         }
     }
