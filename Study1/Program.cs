@@ -1095,33 +1095,48 @@ namespace Study1
         //    }
         //}
 
-        class A
-        {
-            public void m()
-            {
-                Console.WriteLine("Aクラスのメソッド");
-            }
-        }
+        //class A
+        //{
+        //    public void m()
+        //    {
+        //        Console.WriteLine("Aクラスのメソッド");
+        //    }
+        //}
 
-        class B : A
-        {
-            public new void m()
-            {
-                Console.WriteLine("Bクラスのメソッド");
-            }
-        }
+        //class B : A
+        //{
+        //    public new void m()
+        //    {
+        //        Console.WriteLine("Bクラスのメソッド");
+        //    }
+        //}
 
-        class NewSample
+        //class NewSample
+        //{
+        //    static void Main()
+        //    {
+        //        A a = new A();
+        //        B b = new B();
+        //        A ab = new B();
+
+        //        a.m();
+        //        b.m();
+        //        ab.m();
+        //    }
+        //}
+
+        class ObjectSample
         {
             static void Main()
             {
-                A a = new A();
-                B b = new B();
-                A ab = new B();
+                float b = 3.14F;
+                object ob;
+                float c;
 
-                a.m();
-                b.m();
-                ab.m();
+                Console.WriteLine(b);
+                ob = b;
+                c = (float)ob;
+                Console.WriteLine(c);
             }
         }
     }
