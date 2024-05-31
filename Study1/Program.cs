@@ -1063,35 +1063,65 @@ namespace Study1
         //    }
         //}
 
-        interface Greet
-        {
-            void greet();
-        }
+        //interface Greet
+        //{
+        //    void greet();
+        //}
         
-        interface  Bye : Greet 
-        {
-            void bye();
-        }
+        //interface  Bye : Greet 
+        //{
+        //    void bye();
+        //}
         
-        class Greeting : Bye
+        //class Greeting : Bye
+        //{
+        //    public void greet()
+        //    {
+        //        Console.WriteLine("こんにちは！");
+        //    }
+        //    public void bye()
+        //    {
+        //        Console.WriteLine("さよなら");
+        //    }
+        //}
+
+        //class Meet
+        //{
+        //    static void Main()
+        //    {
+        //        Greeting greeting = new Greeting();
+        //        greeting.greet();
+        //        greeting.bye();
+        //    }
+        //}
+
+        class A
         {
-            public void greet()
+            public void m()
             {
-                Console.WriteLine("こんにちは！");
-            }
-            public void bye()
-            {
-                Console.WriteLine("さよなら");
+                Console.WriteLine("Aクラスのメソッド");
             }
         }
 
-        class Meet
+        class B : A
+        {
+            public new void m()
+            {
+                Console.WriteLine("Bクラスのメソッド");
+            }
+        }
+
+        class NewSample
         {
             static void Main()
             {
-                Greeting greeting = new Greeting();
-                greeting.greet();
-                greeting.bye();
+                A a = new A();
+                B b = new B();
+                A ab = new B();
+
+                a.m();
+                b.m();
+                ab.m();
             }
         }
     }
