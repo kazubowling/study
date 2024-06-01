@@ -1125,18 +1125,50 @@ namespace Study1
         //    }
         //}
 
-        class ObjectSample
+        //class ObjectSample
+        //{
+        //    static void Main()
+        //    {
+        //        float b = 3.14F;
+        //        object ob;
+        //        float c;
+
+        //        Console.WriteLine(b);
+        //        ob = b;
+        //        c = (float)ob;
+        //        Console.WriteLine(c);
+        //    }
+        //}
+
+        namespace Tokyo
+        {
+            class TokyoTower
+            {
+                public void print()
+                {
+                    Console.WriteLine("東京タワー");
+                }
+            }
+            namespace Toshima
+            {
+                class Sunshine
+                {
+                    public void print()
+                    {
+                        Console.WriteLine("サンシャイン60");
+                    }
+                }
+            }
+        }
+
+        class TokyoSpots
         {
             static void Main()
             {
-                float b = 3.14F;
-                object ob;
-                float c;
-
-                Console.WriteLine(b);
-                ob = b;
-                c = (float)ob;
-                Console.WriteLine(c);
+                Tokyo.TokyoTower tower = new Tokyo.TokyoTower();
+                Tokyo.Toshima.Sunshine sunshine = new Tokyo.Toshima.Sunshine();
+                tower.print();
+                sunshine.print();
             }
         }
     }
