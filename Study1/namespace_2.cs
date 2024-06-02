@@ -1,23 +1,23 @@
-﻿using System;
-using F = Fishing;
+﻿//using System;
+//using F = Fishing;
 
-namespace Fishing
-{
-    class Fish
-    {
-        int num;
-        string name;
-        public Fish(string m, int n)
-        {
-            name = m;
-            num = n;
-        }
-        public void print()
-        {
-            Console.WriteLine(name + "の釣れた数" + num + "匹");
-        }
-    }
-}
+//namespace Fishing
+//{
+//    class Fish
+//    {
+//        int num;
+//        string name;
+//        public Fish(string m, int n)
+//        {
+//            name = m;
+//            num = n;
+//        }
+//        public void print()
+//        {
+//            Console.WriteLine(name + "の釣れた数" + num + "匹");
+//        }
+//    }
+//}
 
 class FishingSample
 {
