@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -1067,12 +1068,12 @@ namespace Study1
         //{
         //    void greet();
         //}
-        
+
         //interface  Bye : Greet 
         //{
         //    void bye();
         //}
-        
+
         //class Greeting : Bye
         //{
         //    public void greet()
@@ -1140,36 +1141,36 @@ namespace Study1
         //    }
         //}
 
-        namespace Tokyo
-        {
-            class TokyoTower
-            {
-                public void print()
-                {
-                    Console.WriteLine("東京タワー");
-                }
-            }
-            namespace Toshima
-            {
-                class Sunshine
-                {
-                    public void print()
-                    {
-                        Console.WriteLine("サンシャイン60");
-                    }
-                }
-            }
-        }
+        //namespace Tokyo
+        //{
+        //    class TokyoTower
+        //    {
+        //        public void print()
+        //        {
+        //            Console.WriteLine("東京タワー");
+        //        }
+        //    }
+        //    namespace Toshima
+        //    {
+        //        class Sunshine
+        //        {
+        //            public void print()
+        //            {
+        //                Console.WriteLine("サンシャイン60");
+        //            }
+        //        }
+        //    }
+        //}
 
-        class TokyoSpots
-        {
-            static void Main()
-            {
-                Tokyo.TokyoTower tower = new Tokyo.TokyoTower();
-                Tokyo.Toshima.Sunshine sunshine = new Tokyo.Toshima.Sunshine();
-                tower.print();
-                sunshine.print();
-            }
-        }
+        //class TokyoSpots
+        //{
+        //    static void Main()
+        //    {
+        //        Tokyo.TokyoTower tower = new Tokyo.TokyoTower();
+        //        Tokyo.Toshima.Sunshine sunshine = new Tokyo.Toshima.Sunshine();
+        //        tower.print();
+        //        sunshine.print();
+        //    }
+        //}
     }
 }  
