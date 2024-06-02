@@ -19,13 +19,13 @@
 //    }
 //}
 
-class FishingSample
-{
-    static void Main()
-    {
-        F.Fish iwashi = new F.Fish("イワシ", 12);
-        F.Fish fugu = new F.Fish("フグ", 5);
-        iwashi.print();
-        fugu.print();
-    } 
-}
+//class FishingSample
+//{
+//    static void Main()
+//    {
+//        F.Fish iwashi = new F.Fish("イワシ", 12);
+//        F.Fish fugu = new F.Fish("フグ", 5);
+//        iwashi.print();
+//        fugu.print();
+//    } 
+//}
