@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="dynamic.cs" />
     <Compile Include="Exception.cs" />
+    <Compile Include="HandleFile.cs" />
     <Compile Include="namespace_2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
