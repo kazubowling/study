@@ -49,6 +49,7 @@
     <Compile Include="namespace_2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadLine.cs" />
     <Compile Include="sample6.cs" />
     <Compile Include="WriteFile.cs" />
   </ItemGroup>
