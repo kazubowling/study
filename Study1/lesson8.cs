@@ -21,10 +21,14 @@ class FormatSample
         //Console.WriteLine("P {0, 6:P}", 123);
         //Console.WriteLine("X {0, 6:X}", 123);
 
-        int a = 10;
-        double b = 20.5;
-        //Console.WriteLine("{0} + {1} は、{2}です。", a, b, 1 + b);
+        //int a = 10;
+        //double b = 20.5;
+        ////Console.WriteLine("{0} + {1} は、{2}です。", a, b, 1 + b);
 
-        Console.WriteLine($"{a} + {b}は、{a + b}です。");
+        //Console.WriteLine($"{a} + {b}は、{a + b}です。");
+
+        string a;
+        a = String.Format("{0}の{1}", "C#", "絵本");
+        Console.WriteLine(a);        
     }
 }
