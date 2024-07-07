@@ -53,6 +53,7 @@
     <Compile Include="ReadLine.cs" />
     <Compile Include="Sample 6.cs" />
     <Compile Include="sample6.cs" />
+    <Compile Include="sample8.cs" />
     <Compile Include="WriteFile.cs" />
   </ItemGroup>
   <ItemGroup>
