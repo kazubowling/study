@@ -47,6 +47,7 @@ namespace Study1
     //    }
     //}
 
+    // デリゲートの準備
     delegate void DelegEvent();
     class EventClass
     {
@@ -55,6 +56,7 @@ namespace Study1
 
         public void start()
         {
+            // デリゲートが登録されているかチェックする
             if (delegevent != null)
             {
                 System.Threading.Thread.Sleep(3000);
@@ -71,6 +73,7 @@ namespace Study1
         static void Main()
         {
             EventClass e = new EventClass();
+            // イベントの登録
             e.delegevent += new DelegEvent(handler);
             e.start();
         }
