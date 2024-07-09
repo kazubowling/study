@@ -23,27 +23,56 @@ namespace Study1
     //    }
     //}
 
-    delegate int DelegMsgs();
+    //delegate int DelegMsgs();
 
-    class DelegSample
+    //class DelegSample
+    //{
+    //    static int print1()
+    //    {
+    //        Console.WriteLine("print1");
+    //        return 1;
+    //    }
+    //    static int print2()
+    //    {
+    //        Console.WriteLine("print2");
+    //        return 2;
+    //    }
+    //    static void Main()
+    //    {
+    //        DelegMsgs deleg;
+    //        deleg = new DelegMsgs(print1);
+    //        deleg += new DelegMsgs(print2);
+    //        int n = deleg();
+    //        Console.WriteLine(n);
+    //    }
+    //}
+
+    delegate void DelegEvent();
+    class EventClass
     {
-        static int print1()
+        // イベントの宣言
+        public event DelegEvent delegevent;
+
+        public void start()
         {
-            Console.WriteLine("print1");
-            return 1;
+            if (delegevent != null)
+            {
+                System.Threading.Thread.Sleep(3000);
+                delegevent();
+            }
         }
-        static int print2()
+    }
+    class DelegSamle
+    {
+        static void handler()
         {
-            Console.WriteLine("print2");
-            return 2;
+            Console.WriteLine("ハンドラが呼び出されました");
         }
         static void Main()
         {
-            DelegMsgs deleg;
-            deleg = new DelegMsgs(print1);
-            deleg += new DelegMsgs(print2);
-            int n = deleg();
-            Console.WriteLine(n);
+            EventClass e = new EventClass();
+            e.delegevent += new DelegEvent(handler);
+            e.start();
         }
     }
 }
