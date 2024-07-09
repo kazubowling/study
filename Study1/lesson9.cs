@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Study1
 {
+    /// <summary>
+    /// ジェネリッククラス
+    /// </summary>
     //class Connector<T>
     //{
     //    public string connect (T a, T b)
@@ -23,6 +26,9 @@ namespace Study1
     //    }
     //}
 
+    /// <summary>
+    /// デリゲート
+    /// </summary>
     //delegate int DelegMsgs();
 
     //class DelegSample
@@ -47,35 +53,63 @@ namespace Study1
     //    }
     //}
 
-    // デリゲートの準備
-    delegate void DelegEvent();
-    class EventClass
-    {
-        // イベントの宣言
-        public event DelegEvent delegevent;
+    /// <summary>
+    /// イベント
+    /// </summary>
+    //// デリゲートの準備
+    //delegate void DelegEvent();
+    //class EventClass
+    //{
+    //    // イベントの宣言
+    //    public event DelegEvent delegevent;
 
-        public void start()
-        {
-            // デリゲートが登録されているかチェックする
-            if (delegevent != null)
-            {
-                System.Threading.Thread.Sleep(3000);
-                delegevent();
-            }
-        }
-    }
-    class DelegSamle
-    {
-        static void handler()
-        {
-            Console.WriteLine("ハンドラが呼び出されました");
-        }
-        static void Main()
-        {
-            EventClass e = new EventClass();
-            // イベントの登録
-            e.delegevent += new DelegEvent(handler);
-            e.start();
-        }
-    }
+    //    public void start()
+    //    {
+    //        // デリゲートが登録されているかチェックする
+    //        if (delegevent != null)
+    //        {
+    //            System.Threading.Thread.Sleep(3000);
+    //            delegevent();
+    //        }
+    //    }
+    //}
+    //class DelegSamle
+    //{
+    //    static void handler()
+    //    {
+    //        Console.WriteLine("ハンドラが呼び出されました");
+    //    }
+    //    static void Main()
+    //    {
+    //        EventClass e = new EventClass();
+    //        // イベントの登録
+    //        e.delegevent += new DelegEvent(handler);
+    //        e.start();
+    //    }
+    //}
+
+    /// <summary>
+    /// LINQ
+    /// </summary>
+    //class MainClss
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        var books = new[]
+    //        {
+    //            new { title = "しおりの料理", price = 800 },
+    //            new { title = "しおりのC#入門", price = 1200 },
+    //            new { title = "しおりの航海記", price = 1500 }
+    //        };
+
+    //        var mybooks = books.Where(x => x.price > 1000).Select(x => x.title);
+
+    //        foreach (var booktitle in mybooks)
+    //        {
+    //            Console.WriteLine(booktitle);
+    //        }
+    //    }
+    //}
+
+
 }
