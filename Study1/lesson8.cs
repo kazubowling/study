@@ -32,3 +32,14 @@
 //        Console.WriteLine(a);
 //    }
 //}
+
+class DTSample
+{
+    static void Main()
+    {
+        DateTime dt = DateTime.Now;
+
+        Console.WriteLine("今日は{0}年{1}月{2}日({3})で、", dt.Year, dt.Month, dt.Day, dt.DayOfWeek);
+        Console.WriteLine("現在{0}時{1}分{2}秒です", dt.Hour, dt.Minute, dt.Second);
+    }
+}
