@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 //class A
 //{
@@ -33,13 +35,48 @@
 //    }
 //}
 
-class DTSample
-{
-    static void Main()
-    {
-        DateTime dt = DateTime.Now;
+//class DTSample
+//{
+//    static void Main()
+//    {
+//        DateTime dt = DateTime.Now;
 
-        Console.WriteLine("今日は{0}年{1}月{2}日({3})で、", dt.Year, dt.Month, dt.Day, dt.DayOfWeek);
-        Console.WriteLine("現在{0}時{1}分{2}秒です", dt.Hour, dt.Minute, dt.Second);
+//        Console.WriteLine("今日は{0}年{1}月{2}日({3})で、", dt.Year, dt.Month, dt.Day, dt.DayOfWeek);
+//        Console.WriteLine("現在{0}時{1}分{2}秒です", dt.Hour, dt.Minute, dt.Second);
+//    }
+//}
+
+class MainClass
+{
+    static async Task<int> ProcAsync()
+    {
+        Random r = new Random();
+        int sum = 0;
+        await Task.Run(() =>
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                int x = r.Next(100);
+                Console.WriteLine("ランダムな数値：" + x.ToString());
+                sum = sum + x;
+                Thread.Sleep(1000);
+            }
+        });
+
+        Console.WriteLine("ProcAsync() 終了");
+        return (sum);
+    }
+
+    static async Task MainProcAsync()
+    {
+        Console.WriteLine("キーを押すと終了します。");
+        int sum = await ProcAsync();
+        Console.WriteLine("ランダムな数値の合計：" + sum.ToString());
+    }
+
+    static void Main(string[] args)
+    {
+        MainProcAsync();
+        Console.ReadKey();
     }
 }
